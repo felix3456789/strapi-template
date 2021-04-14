@@ -1,7 +1,9 @@
 version: '3'
 services:
   strapi:
-    image: felixdev/strapi_template
+    image: felix3456789/strapi_template
+    tty: true
+    stdin_open: true
     environment:
       DATABASE_CLIENT: postgres
       DATABASE_NAME: strapi
@@ -10,17 +12,24 @@ services:
       DATABASE_USERNAME: strapi
       DATABASE_PASSWORD: strapi
     volumes:
-      - ./strapi:/srv/app
+      - ./app:/srv/app
     ports:
       - '1337:1337'
-    depends_on:
+    links:
       - postgres
-
   postgres:
     image: postgres
+    ports:
+      - 5432:5432
     environment:
       POSTGRES_DB: strapi
       POSTGRES_USER: strapi
       POSTGRES_PASSWORD: strapi
     volumes:
       - ./data:/var/lib/postgresql/data
+  # web:
+  #   ports: 3000:3000
+  #   tty: true
+  #   stdin_open: true
+  #   volumes:
+  #     - ./gatsby:/src/app
