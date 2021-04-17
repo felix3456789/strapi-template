@@ -1,0 +1,1 @@
+docker exec -i strapi-template_postgres_1 pg_dumpall -U strapi > ./pgdb/backup_name.sql

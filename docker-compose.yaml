@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   strapi:
     image: felix3456789/strapi_template
@@ -14,8 +14,8 @@ services:
     volumes:
       - ./app:/srv/app
     ports:
-      - '1337:1337'
-    links:
+      - "1337:1337"
+    depends_on:
       - postgres
   postgres:
     image: postgres
@@ -28,7 +28,9 @@ services:
     volumes:
       - ./data:/var/lib/postgresql/data
   # web:
-  #   ports: 3000:3000
+  #   image: node:12
+  #   ports:
+  #     - 3000:3000
   #   tty: true
   #   stdin_open: true
   #   volumes:
