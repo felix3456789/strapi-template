@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "order_details",
+  "info": {
+    "name": "order_detail",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "package_id": {
+      "model": "package"
+    },
+    "qty": {
+      "type": "integer"
+    },
+    "order_id": {
+      "via": "order_detail",
+      "model": "order"
+    }
+  }
+}

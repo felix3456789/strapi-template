@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/shipping-details",
+      "handler": "shipping-detail.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/shipping-details/count",
+      "handler": "shipping-detail.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/shipping-details/:id",
+      "handler": "shipping-detail.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/shipping-details",
+      "handler": "shipping-detail.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/shipping-details/:id",
+      "handler": "shipping-detail.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/shipping-details/:id",
+      "handler": "shipping-detail.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

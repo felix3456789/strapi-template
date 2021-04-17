@@ -1,7 +1,7 @@
-version: "3"
+version: '3'
 services:
   strapi:
-    image: felix3456789/strapi_template
+    image: strapi/strapi
     tty: true
     stdin_open: true
     environment:
@@ -14,7 +14,7 @@ services:
     volumes:
       - ./app:/srv/app
     ports:
-      - "1337:1337"
+      - '1337:1337'
     depends_on:
       - postgres
   postgres:

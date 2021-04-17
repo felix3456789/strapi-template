@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "package_items",
+  "info": {
+    "name": "package_item",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "package_id": {
+      "via": "package_items",
+      "model": "package"
+    },
+    "product_id": {
+      "model": "product"
+    },
+    "qty": {
+      "type": "integer"
+    }
+  }
+}

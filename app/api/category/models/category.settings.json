@@ -1,8 +1,9 @@
 {
-  "kind": "singleType",
-  "collectionName": "home_pages",
+  "kind": "collectionType",
+  "collectionName": "categories",
   "info": {
-    "name": "homePage"
+    "name": "category",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -10,7 +11,7 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "title": {
+    "name": {
       "type": "string"
     }
   }

@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shipping_details",
+  "info": {
+    "name": "shipping_detail"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "sent",
+        "delivery"
+      ]
+    },
+    "tracking_id": {
+      "type": "string"
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "address1": {
+      "type": "text"
+    },
+    "address2": {
+      "type": "text"
+    },
+    "address3": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "order_id": {
+      "via": "shipping_detail",
+      "model": "order"
+    }
+  }
+}
