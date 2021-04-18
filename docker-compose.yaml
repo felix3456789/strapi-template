@@ -1,7 +1,7 @@
 version: '3'
 services:
   strapi:
-    image: felix3456789/strapi_template
+    image: strapi/strapi
     tty: true
     stdin_open: true
     environment:
